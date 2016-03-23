@@ -1,11 +1,9 @@
-$(document).ready(function(){
-  $("form").submit(event) {
+
+$(document).ready(function() {
+  $("form").submit(function(event) {
     var userNameInput = $("input#userName").val();
-
-    $(".name").text(userNameInput);
-
+    $(".name").text(userNameInput.toUpperCase());
     $(".letter").show();
-    $("form").hide();
     event.preventDefault();
 
     });
